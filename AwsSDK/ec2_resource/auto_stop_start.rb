@@ -1,11 +1,16 @@
 require 'aws-sdk'
-require "cron_parser"
-require "logger"
+require 'parse-cron'
+require 'logger'
 
 class Operator
   
   def initialize(region)
-    @ec2 = Aws::EC2::Resource.new(region: region)
+    @client = Aws::EC2::Client.new(
+        access_key_id: 'ACCESS_KEY_ID',
+        secret_access_key: 'SECRET_ACCESS_KEY',
+        region: region
+    )
+    @ec2 = Aws::EC2::Resource.new(client: @client)
     @stop_list = []
     @start_list = []
     @logger = Logger.new("#{File.dirname(__FILE__)}/#{region}.log", 5, 5120000)
