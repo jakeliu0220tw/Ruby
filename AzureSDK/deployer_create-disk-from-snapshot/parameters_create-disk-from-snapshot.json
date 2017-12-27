@@ -1,0 +1,30 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "apiVersion": {
+            "value": "2016-04-30-preview"
+        },
+        "name": {
+            "value": "azureuser9999"
+        },
+        "accountType": {
+            "value": "Standard_LRS"
+        },
+        "location": {
+            "value": "southcentralus"
+        },
+        "diskSizeGB": {
+            "value": ""
+        },
+        "createOption": {
+            "value": "copy"
+        },
+        "sourceUri": {
+            "value": "/subscriptions/802136ca-e0a8-447c-b138-fa22e3db978f/resourceGroups/southcentralus/providers/Microsoft.Compute/snapshots/gamehost-qa_snapshot_20170822"
+        },
+        "osType": {
+            "value": ""
+        }
+    }
+}

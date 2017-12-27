@@ -1,0 +1,47 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "apiVersion": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "sourceUri": {
+            "type": "string"
+        },
+        "osType": {
+            "type": "string"
+        },
+        "accountType": {
+            "type": "string"
+        },
+        "createOption": {
+            "type": "string"
+        },
+        "diskSizeGB": {
+            "type": "string"
+        },
+        "location": {
+            "type": "string"
+        }
+    },
+    "resources": [
+        {
+            "apiVersion": "[parameters('apiVersion')]",
+            "type": "Microsoft.Compute/disks",
+            "name": "[parameters('name')]",
+            "location": "[parameters('location')]",
+            "properties": {
+                "creationData": {
+                    "createOption": "[parameters('createOption')]",
+                    "sourceUri": "[parameters('sourceUri')]"
+                },
+                "accountType": "[parameters('accountType')]",
+                "diskSizeGB": "[parameters('diskSizeGB')]",
+                "osType": "[parameters('osType')]"
+            }
+        }
+    ]
+}

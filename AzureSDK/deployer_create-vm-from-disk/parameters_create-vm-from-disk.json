@@ -1,0 +1,48 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "southcentralus"
+        },
+        "resourceGroup": {
+            "value": "azureuser9999"
+        },       
+        "virtualMachineName": {
+            "value": "azureuser9999"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_NV6"
+        },
+        "virtualNetworkName": {
+            "value": "azureuser9999_vnet"
+        },
+        "networkInterfaceName": {
+            "value": "azureuser9999_nic"
+        },
+        "networkSecurityGroupName": {
+            "value": "azureuser9999_nsg"
+        },
+        "addressPrefix": {
+            "value": "10.0.0.0/16"
+        },
+        "subnetName": {
+            "value": "default"
+        },
+        "subnetPrefix": {
+            "value": "10.0.0.0/16"
+        },
+        "publicIpAddressName": {
+            "value": "azureuser9999_ip"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        },
+        "osDisk": {
+            "value": "osDisk"
+        },
+        "dataDisk": {
+            "value": "dataDisk"
+        }
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "southcentralus"
+        },
+        "resourceGroup": {
+            "value": "jake"
+        },
+        "virtualMachineName": {
+            "value": "jake"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_NV6"
+        },
+        "adminUsername": {
+            "value": "azureuser"
+        },
+        "virtualNetworkName": {
+            "value": "jake-vnet"
+        },
+        "networkInterfaceName": {
+            "value": "jake-nic"
+        },
+        "networkSecurityGroupName": {
+            "value": "jake-nsg"
+        },
+        "adminPassword": {
+            "value": "M@cd0nald1688"
+        },
+        "addressPrefix": {
+            "value": "10.0.0.0/16"
+        },
+        "subnetName": {
+            "value": "default"
+        },
+        "subnetPrefix": {
+            "value": "10.0.0.0/16"
+        },
+        "publicIpAddressName": {
+            "value": "jake-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        },
+        "imageId": {
+            "value": "/subscriptions/802136ca-e0a8-447c-b138-fa22e3db978f/resourceGroups/south_central/providers/Microsoft.Compute/images/GameHost-image-20170814174158"
+        }
+    }
+}
