@@ -1,6 +1,12 @@
 require 'aws-sdk'
 
-ec2 = Aws::EC2::Resource.new(region: 'eu-west-1')
+client = Aws::EC2::Client.new(
+  access_key_id: AWS_ACCESS_ID,
+  secret_access_key: AWS_SECRET_KEY,
+  region: 'us-west-1'
+)
+
+ec2 = Aws::EC2::Resource.new({ client: client})
 
 # Get all instances with tag key 'Group'
 # and tag value 'MyGroovyGroup':

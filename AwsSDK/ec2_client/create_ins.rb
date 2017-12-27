@@ -204,16 +204,16 @@ resp.instances.each do |i| #=> Array
         puts "net.attachment.status = #{net.attachment.status}" #=> String, one of "attaching", "attached", "detaching", "detached"
         puts "net.attachment.attach_time = #{net.attachment.attach_time}" #=> Time
         puts "net.attachment.delete_on_termination = #{net.attachment.delete_on_termination}" #=> true/false
-        # puts "net.association.public_ip = #{net.association.public_ip}" #=> String
-        # puts "net.association.public_dns_name =#{net.association.public_dns_name}" #=> String
-        # puts "net.association.ip_owner_id = #{net.association.ip_owner_id}" #=> String
+        puts "net.association.public_ip = #{net.association.public_ip}" #=> String
+        puts "net.association.public_dns_name =#{net.association.public_dns_name}" #=> String
+        puts "net.association.ip_owner_id = #{net.association.ip_owner_id}" #=> String
         net.private_ip_addresses.each do |ip| #=> Array
             puts "ip.private_ip_address = #{ip.private_ip_address}" #=> String
             puts "ip.private_dns_name = #{ip.private_dns_name}" #=> String
             puts "ip.primary = #{ip.primary}" #=> true/false
-            # puts "ip.association.public_ip =#{ip.association.public_ip}" #=> String
-            # puts "ip.association.public_dns_name =#{ip.association.public_dns_name}" #=> String
-            # puts "ip.association.ip_owner_id =#{ip.association.ip_owner_id}" #=> String
+            puts "ip.association.public_ip =#{ip.association.public_ip}" #=> String
+            puts "ip.association.public_dns_name =#{ip.association.public_dns_name}" #=> String
+            puts "ip.association.ip_owner_id =#{ip.association.ip_owner_id}" #=> String
         end
         net.ipv_6_addresses.each do |ipv6| #=> Array
             puts "ipv6.ipv_6_address = #{ipv6.ipv_6_address}" #=> String
