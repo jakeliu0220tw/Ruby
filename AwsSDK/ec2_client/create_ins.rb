@@ -100,11 +100,17 @@ client = Aws::EC2::Client.new(
 
 resp = client.run_instances({
   dry_run: false,
-  image_id: "ami-746aba14", # required
+  image_id: "ami-4d44d92b", # required
   min_count: 1, # required
   max_count: 1, # required
-  key_name: "Zuma_20160908",
-  instance_type: "t2.micro",
+  key_name: "Malibu_Tokyo_20170427",
+  instance_type: "g2.2xlarge",
+  block_device_mappings: [
+    {
+      device_name: "/dev/sda1",
+      ebs: { delete_on_termination: true, volume_type: "gp2" },
+    }
+  ], 
   monitoring: {
     enabled: false, # required
   },
@@ -113,8 +119,8 @@ resp = client.run_instances({
   network_interfaces: [
     {
       device_index: 0,
-      subnet_id: "subnet-a42fa8fc",
-      groups: ["sg-197c8360"],
+      subnet_id: "subnet-5acb1932",
+      groups: ["sg-0e001f69"],
       delete_on_termination: true,
       associate_public_ip_address: true
     },
